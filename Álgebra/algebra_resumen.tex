@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[spanish, english]{babel}
+\usepackage{fullpage}
+\usepackage{amsmath, amsfonts}
+
+% Títulos
+\title{Matrices Algebra}
+\author{Ian Chen}
+\date{6 de Junio, 2024}
+
+% Documento
+\begin{document}
+\maketitle
+
+%-------------------------------------------------%
+\section{Sistemas de ecuaciones lineales}
+\subsection{Definición}
+Un sistema de ecuaciones 'lineales' son ecuaciones 'lineales'\footnote{Ecuaciones o polinomios de grado 1} que comparten misma solución. \\[6pt]
+Vectorialmente se podría pensar como la intersección entre un conjunto de planos. Pensando de esta manera podríamos deducir que las posibles soluciones son un punto, todos o ninguno.\\[6pt]
+Se tiene el siguiente sistema lineal de m-ecuaciones lineales con n-incógnitos por definición:
+
+\[\left\{
+\begin{array}{ccccccccc}
+    a_{11}x_1 & + & a_{12}x_2 & + & \dots & + & a_{in}x_n & = & b_1 \\
+    a_{21}x_1 & + & \dots & + & a_{2n}x_n & = & b_2 \\
+    \vdots \\
+    a_{m1}x_1 & + & a_{m2}x_2 & + & \dots & + & a_{mn}x_n & = & b_m
+\end{array}
+\right.
+\]
+\noindent
+Tipos de solución:
+\begin{itemize}
+    \item Tiene Solución → sistema compatible
+    \begin{itemize}
+        \item Solución única (Sistema compatible determinado)
+        \item Solución infinitas (Sistema compatible indeterminado)
+    \end{itemize}
+    \item No tiene solución → sistema incompatible
+\end{itemize}
+
+\subsection{Pasos de solución}
+\begin{itemize}
+    \item Cambiar el orden de las ecuaciones
+    \item Cambiar una ecuación por un múltiplo no nulo de ella
+        $$E_i \rightarrow kE_i (k \neq 0)$$
+    \item Cambiar una ecuación por dicha ecuación + un múltiplo de cualquier otra 
+        $$E_i \rightarrow E_i + kE_j (i \neq j)$$
+    \item Utilizando las propiedades, pasarlo a matrices y llegar a un sistema escalonado.
+\end{itemize}
+
+\subsection{Ejemplo}
+Teniendo el siguiente sistema lineal se puede representarlo como una matriz para facilitar su solución:
+% sistema de ec
+\[\left\{
+\begin{array}{ccccccc}
+    3x & + & 4y & - & 2z & = & 5 \\
+    -x & + & y & - & z & = & 3
+\end{array}
+\right.
+\]
+
+% Matrices
+\[
+\left(
+\begin{array}{ccc|c}
+     3 & 4 & -2 & 5 \\
+     -1 & 1 & 1 & 3
+\end{array}
+\right) 
+\, F_2 \rightarrow 3F_2 + F_1 \,
+\left(
+\begin{array}{ccc|c}
+     3 & 4 & -2 & 5 \\
+     0 & 7 & 1 & 14
+\end{array}
+\right) 
+\]
+Luego se obtiene que $$7y+z=14 \rightarrow z=14-7y$$ Teniendo esta identidad se puede despejar el resto de las ecuaciones en base a ella: 
+\begin{align*}
+    3x+4y-28+14y & = 5\\
+    3x+18y &=33 \\
+    3x &=33-18y\\
+    x &= 11-6y
+\end{align*}
+Finalmente se obtiene la siguiente solución
+\[S:
+\left\{
+\begin{array}{cc}
+     x: & 11-6y \\
+     y: & y \\
+     z: & 14-7y
+\end{array}
+\right.
+\]
+$$S=\{(11-6y, y, 14-7y) \, /  \,y \in \mathbb{R}\} = \{(11, 0, 14) + (-6y, y, -7y)\}$$
+$$\Vec{X} = (11, 0, 14) + \lambda(-6, 1, 7)$$
+
+\vspace{1cm}
+%---------------------------------------%
+\section{Matrices}
+\subsection{Definición}
+\begin{itemize}
+    \item La matriz es una tabla de números
+    \item Sirve para organizar información (principalmente)
+    \item Ejemplo de compañía telefónica, vuelos, etc
+    \item La matriz es un arreglo (array)
+\end{itemize}
+
+% SUMA 
+\subsection{Suma de matrices}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Multiplicación
+\subsection{Multiplicación de matrices}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Identidad
+\subsection{Matriz identidad}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Trasposición
+\subsection{Trasposición}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Matriz cuadrada
+\subsection{Matriz cuadrada}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Inversa
+\subsection{Matriz inversa}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+% Determinantes
+\subsection{Determinantes}
+\subsubsection{Definición}
+\subsubsection{propiedades}
+
+%-----------------------------------%
+\end{document}
