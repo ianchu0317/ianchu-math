@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Notas - propiedades y teoremas},
+    pdfpagemode=FullScreen,
+}
+\usepackage{fullpage}
+
+%---------------------
+\title{Propiedades y Teoremas - Primer parcial}
+\author{Ian Chen}
+\date{June 2024}
+
+%--------------------
+\begin{document}
+% \maketitle
+\section{Sucesiones}
+\subsection{Subsucesiones}
+Una subsucesión de una sucesión $\displaystyle a_n$ es una sucesión que está dentro de la sucesión $a_n$.
+Una subsucesión por ejemplo nos brinda información acerca de la sucesión la cual pertenece. 
+
+Por ejemplo la sucesión de números pares $a_n = \{2n ,\, n \in \mathbb{N} \} = \{2, 4, 6, 8, 10 \dots \}$ podría tener de subsucesión $a_{n_k} = \{2^k, k \in \mathbb{N}\} = \{2, 4, 8, 16\dots \}$ que contenga las potencias de 2, ya que las potencias de 2 también son números pares.
+
+Algunas propiedades importantes de subsucesiones son:
+\begin{itemize}
+    \item[-] Si $a_n$ converge a $L \neq \infty$, entonces todas las subsucesiones también convergen a $L$
+    \item[-] Si $a_n$ es una sucesión acotada, entonces todas las subsucesiones también son acotadas
+    \item[-] Si las subsucesiones tienden a límites distintos, entonces la sucesión $a_n$ no converge (osea que no está acotado $\displaystyle \lim \limits_{x \to \infty}a_n=\infty$)
+\end{itemize}
+Información extraída de la siguiente \href{https://www.matesfacil.com/BAC/progresiones/subsucesion-sucesion-parcial-convergente-propiedades-ejemplos-limites-problemas-resueltos.html}{página}.
+
+\vspace{0.5cm}
+%-----------------------
+\subsection{Factoriales}
+Ecuaciones importantes de factoriales:
+\begin{itemize}
+    \item[-] Se define $0\,! = 1$
+    \item[-] Ecuaciones importantes dadas por despeje 
+    \begin{align*}
+        n\,! &= 1 \cdot 2 \cdot 3 \dots n \\[6pt]
+        n\,! \cdot (n+1) &= (n+1)\,! \\[6pt]
+        \frac{(n+1)\,!}{(n+1)} &= n\,! \\[6pt]
+        \frac{(n+1)\,!}{n\,!} &= n+1
+    \end{align*}
+\end{itemize}
+
+
+%-----------------------
+\subsection{Criterio de D'Alambert y Cauchy}
+Los dos criterios sirven para averiguar si la sucesión tiende a $0$ o a infinito.
+D'Alambert (criterio del cociente) dice que si $a_n \neq 0$, entonces $\lim \limits_{n \to \infty} \dfrac{a_{n+1}}{a_n} = L$, mientras que Cauchy (criterio de raiz enésima) dice que $\displaystyle \lim \limits_{n \to \infty} \sqrt[n]{a_n} = L$.
+
+Luego, 
+\[
+\lim \limits_{x \to \infty} a_n \left\{
+\begin{array}{lcr}
+    \infty & si & \,L>1 \\
+     0 & si & \,0 \leq L \leq 1 \\
+     indet & si & \,L=1
+\end{array}
+\right.
+\]
+
+%--------------------
+\section{Límites}
+
+
+%--------------------
+\section{Derivadas}
+
+
+\end{document}
