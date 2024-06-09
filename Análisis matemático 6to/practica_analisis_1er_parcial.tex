@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{setspace}
+\usepackage{fullpage}
+
+
+%_---------------
+\begin{document}
+\setstretch{2.0}
+
+\section{Prueba pasada}
+
+\begin{enumerate}
+    \item Dada la función $f(x)$, hallar $a$, $b$, $c$ y $d$, y $g(x)$ para que $f$ tenga a $\displaystyle y=\frac{\sqrt{7}}{2}$ como asíntota horizontal para $x \to +\infty$, y para que $f$ sea continua en $\mathbb{R}$
+(sugerencia: primero analizar la continuidad en $x=0$). Calcular si tiene asíntota para $x \to -\infty$.
+\[
+f(x)=\left\{
+\begin{array}{ccrcc}
+    \dfrac{\sqrt{bx^2+ax+1}-1}{x} & si & x\neq 0 & \wedge & x\not\in(c, d) \\[16pt]
+    2 & si & x=0 \\[10pt]
+    g(x) & si & x\in(c, d)
+\end{array}
+\right.
+\]
+
+\item Sabiendo que $f$ es biyectiva y que $6y-x=3$ es la recta tangente al gráfico de $f$ en $x=3$ y 
+$\displaystyle g(x)=\left\{
+\begin{array}{ccr}
+     x^2-x & si & x<2 \\
+     \dfrac{2}{x-1} & si & x \geq 2 
+\end{array}\right.$ calcular $h'(1)$, siendo $h(x)=gof^{-1}(x)$ (ojo: $gof^{-1}(x) \neq (gof)^{-1}(x)$) 
+\vspace{0.5cm}
+
+\item Dada $f$ derivable, tal que $f(4)=\frac{1}{2} \wedge f'(4)=-2$. Calcular la ecuación de la recta tangente en el gráfico de $g(x)$ en el punto de abscisa $x=1$, siendo $\displaystyle g(x)=\frac{e^{2-2x^2} \cdot f(4x)}{x+f^4(x+3)}+\left(1+ \ln x \right)^{2x}$
+
+\item calcular, si es que existe $g'(0)$, siendo $\displaystyle g(x)=\left\{\begin{array}{ccr}
+    \dfrac{\ln \left(1+4x^2 \right) + \cos \left( \dfrac{x}{2}\right) - 1}{x} & si & x \geq 0 \\[16pt]
+     \sqrt{x^2+x+1} - 1 & si & x \leq 0
+\end{array}\right.$
+\end{enumerate}
+
+
+\newpage
+%--------------------
+\section{Ejercicios de clase}
+\begin{enumerate}
+    \item Hallar la ecuación de la recta tangente al gráfico de ${h(x)=g(x) \cdot f(2x^3)=\dfrac{3}{f(2x)}}$ 
+    en el punto de abscisa $x_0=1$ sabiendo que $g(x)=\ln\left( 2x-1 \right) + e^{1-x^2}$ y que $y=-2x+7$ es la ecuación de la recta tangente al gráfico $f(x)$ en el punto $(2, 3)$.
+
+    \item Sabiendo que $f$ es biyectiva y que $6y-x=3$ es la recta tangente al gráfico de $f$ en $x=3$ y 
+$\displaystyle g(x)=\left\{
+\begin{array}{ccr}
+     x^2-x & si & x<2 \\
+     \dfrac{2}{x-1} & si & x \geq 2 
+\end{array}\right.$ calcular $h'(1)$, siendo $h(x)=gof^{-1}(x)$ (ojo: $gof^{-1}(x) \neq (gof)^{-1}(x)$) 
+\vspace{0.5cm}
+
+    \item Determinar $a$ y $b$, siendo $y=2x+b$ Asíntota Oblicua de $f$ para $f \to +\infty$. Con estos valores hallados aclarar la existencia de dos asíntotas de $f$.
+    \[f(x)=\left\{
+    \begin{array}{ccr}
+         \displaystyle (x-5)\left(\sqrt{16x^2+26} - \sqrt{16x^2+2} \right)& si & x<1 \\
+         \dfrac{x^2-1}{ax+6} & si & x \geq 1 
+    \end{array}
+    \right.\]
+
+\end{enumerate}
+
+
+
+\newpage
+%----------------------
+\section{Selección ejercicios de guía (problemas varios)}
+\begin{enumerate}
+    \item La recta tangente de la función f en el punto de abscisa $x=-1$ tiene ecuación $y=-5x+3$. 
+    Calcule la ecuación de la recta tangente a la función $g(x)=f(-x^2+\sin (\pi x))$ en el punto de abscisa $x=1$.
+
+    \item Considere la función $\displaystyle f(x)=\left\{\begin{array}{ccr}
+    \dfrac{1}{|x|} & si &  |x| > 5 \\[10pt]
+     a+bx^2 & si & x \leq 5
+    \end{array}\right.$\\[6pt]
+    Halle los valores de $a$ y $b$ para los cuales existe $f'(5)$
+
+    \vspace{0.5cm}
+    \item Considere la función $\displaystyle f(x)=\left\{\begin{array}{ccr}
+    xe^{-\frac{1}{x}} & si &  x > 0 \\[10pt]
+     ax+b & si & x \leq 0 
+    \end{array}\right.$\\[6pt] 
+    Halle los valores de $a$ y $b$ para que $f$ resulte derivable.
+\end{enumerate}
+
+\end{document}
