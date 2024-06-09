@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsfonts, amsmath, amssymb}
+\usepackage[spanish]{babel}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -11,6 +12,9 @@
     pdfpagemode=FullScreen,
 }
 \usepackage{fullpage}
+\usepackage{pgfplots}
+\usepackage{float}
+\pgfplotsset{compat=1.18}
 
 %---------------------
 \title{Propiedades y Teoremas - Primer parcial}
@@ -19,7 +23,10 @@
 
 %--------------------
 \begin{document}
+
+\selectlanguage{spanish}
 % \maketitle
+
 \section{Sucesiones}
 \subsection{Subsucesiones}
 Una subsucesión de una sucesión $\displaystyle a_n$ es una sucesión que está dentro de la sucesión $a_n$.
@@ -67,12 +74,63 @@ Luego,
 \right.
 \]
 
+
+\newpage
 %--------------------
 \section{Límites}
+\subsection{Propiedades importantes}
+\begin{align*}
+    \lim \limits_{x \to 0} \frac{\sin x}{x} = 1 \\
+    \lim \limits_{n \to \infty} \left(1+\frac{1}{n} \right)^n = e\\
+    \lim \limits_{x \to 0} \frac{\ln (1+x)}{x} = 1 
+\end{align*}
 
 
+\subsection{Asíntotas oblicuas}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+        \addplot[color=red, samples=100, domain=-10:10]{x^3 / (x^2-9)};
+        \addplot[color=blue, samples=100, domain=-10:10]{x};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Gráfico feo de $f(x)=\dfrac{x^3}{x^2-9}$ (rojo) con su asíntota oblicua $y=x$ (azul)}
+    \label{fig:graph-1}
+\end{figure}
+
+A partir de la observación del gráfico podemos notar que tendiendo al infinito la función se acerca cada vez más a la asíntota oblicua, por lo cual $\displaystyle \lim \limits_{x \to \infty} \left[f(x)-y \right]=0$. 
+A partir de esta ecuación se puede ir deduciendo los componentes de la asíntota oblicua:
+
+\begin{align}
+\lim \limits_{x \to \infty} \left[f(x)-y \right] &= 0 \\
+\lim \limits_{x \to \infty} \left[f(x)- (mx+b)\right] &= 0 \\
+\lim \limits_{x \to \infty} \left[f(x)-mx -b \right] &= 0 \\
+\lim \limits_{x \to \infty} \left[f(x)-mx \right] - \lim \limits_{x \to \infty} b &= 0 \\
+\lim \limits_{x \to \infty} \left[f(x)-mx \right] &= b \\
+\lim \limits_{x \to \infty} x\left(\dfrac{f(x)}{x} - m\right)  &= b \\
+\lim \limits_{x \to \infty} \left(\dfrac{f(x)}{x} - m\right)  &= 0 \\
+\lim \limits_{x \to \infty} \dfrac{f(x)}{x}  &= m
+\end{align}
+
+Es necesario que la Ecuación 7 sea 0 ya que se produciría una indeterminación y por lo tanto se puede salvarla. En cambio si no es equivalente a 0, no habría una indeterminación y por lo tanto no habría una asíntota oblicua.
+
+Resumiendo:
+\begin{align*}
+    \lim \limits_{x \to \infty} f(x)-mx &= b \\
+    \lim \limits_{x \to \infty} \dfrac{f(x)}{x}  &= m
+\end{align*}
+
+\vspace{0.5cm}
 %--------------------
 \section{Derivadas}
-
+\subsection{Cociente incremental}
+Fórmula general
+$$\lim \limits_{h \to 0} \dfrac{f(x+h)-f(x)}{h}$$
+Derivada en un punto $a$
+$$\lim \limits_{h \to 0} \dfrac{f(a+h)-f(a)}{h}$$
+$$\lim \limits_{x \to a} \dfrac{f(x)-f(a)}{x-a}$$
+\subsection{Derivada de la función inversa}
+$$(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$$
 
 \end{document}
